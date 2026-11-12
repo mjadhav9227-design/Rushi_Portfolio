@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ArrowDown, ArrowUpRight, Menu, MoveRight, X } from 'lucide-react';
+import { WorkSection } from './WorkSection';
 
 const services = [
   { number: '01', name: 'Reels & short-form', detail: 'Made to stop the scroll, built around a real idea.' },
@@ -12,32 +13,6 @@ const services = [
   { number: '08', name: 'Campaign content', detail: 'One strong idea, carried all the way through.' },
 ];
 
-const workStudies = [
-  {
-    number: 'STUDY 01',
-    title: 'A softer kind of impact',
-    type: 'Light / material / movement',
-    image: '/asr-study-hero.png',
-    alt: 'Concept visual study of fabric sweeping through a cinematic blue-toned architectural space',
-    className: 'study-frame study-frame--fabric',
-  },
-  {
-    number: 'STUDY 02',
-    title: 'The shape of a pause',
-    type: 'Glass / reflection / stillness',
-    image: '/asr-study-glass.png',
-    alt: 'Abstract concept study of rippling water and a glass sphere in cool blue light',
-    className: 'study-frame study-frame--glass',
-  },
-  {
-    number: 'STUDY 03',
-    title: 'Color, let loose',
-    type: 'Pigment / energy / contrast',
-    image: '/asr-study-ink.png',
-    alt: 'Abstract ink plume floating in a dark, cinematic blue-violet space',
-    className: 'study-frame study-frame--ink',
-  },
-];
 
 const navItems = [
   { label: 'Studio', href: '#studio' },
@@ -61,7 +36,7 @@ function Home() {
               <a key={item.href} className="nav-link" href={item.href} data-testid={`link-nav-${item.label.toLowerCase()}`}>{item.label}</a>
             ))}
           </nav>
-          <a className="header-cta" href="mailto:morerushi@gmail.com" data-testid="link-header-email">
+          <a className="header-cta" href="mailto:asrmotionstudio1436@gmail.com" data-testid="link-header-email">
             <span>Let’s talk</span><ArrowUpRight size={15} strokeWidth={1.8} />
           </a>
           <button
@@ -87,7 +62,7 @@ function Home() {
                 <span className="mono">0{index + 1}</span>{item.label}<ArrowUpRight size={16} />
               </a>
             ))}
-            <a className="mobile-nav-contact" href="mailto:morerushi@gmail.com" onClick={() => setMenuOpen(false)}>Start a conversation</a>
+            <a className="mobile-nav-contact" href="mailto:asrmotionstudio1436@gmail.com" onClick={() => setMenuOpen(false)}>Start a conversation</a>
           </nav>
         )}
       </header>
@@ -175,42 +150,12 @@ function Home() {
             </div>
             <div className="services-foot">
               <span className="mono">FROM A SINGLE FRAME TO THE WHOLE CAMPAIGN</span>
-              <a href="mailto:morerushi@gmail.com">Tell us what you’re imagining <MoveRight size={17} /></a>
+              <a href="mailto:asrmotionstudio1436@gmail.com">Tell us what you’re imagining <MoveRight size={17} /></a>
             </div>
           </div>
         </section>
 
-        <section className="work-section" id="work" aria-labelledby="work-title">
-          <div className="section-shell">
-            <div className="work-heading">
-              <div>
-                <span className="eyebrow"><span className="section-number">03</span> / A FEEL FOR THE FRAME</span>
-                <h2 id="work-title">Work in<br /><em className="serif">progress.</em></h2>
-              </div>
-              <div className="work-intro">
-                <span className="work-note-mark">↘</span>
-                <p>These are visual studies, not client projects — a glimpse at the textures, moods and motion we love to explore.</p>
-              </div>
-            </div>
-            <div className="work-grid">
-              {workStudies.map((study) => (
-                <article className="work-card" key={study.number} data-testid={`card-study-${study.number.replaceAll(' ', '-').toLowerCase()}`}>
-                  <div className={study.className}>
-                    <img className="work-study" src={`${import.meta.env.BASE_URL}${study.image.replace(/^\//, '')}`} alt={study.alt} loading="lazy" />
-                    <span className="study-tag mono">CONCEPT / VISUAL STUDY</span>
-                    <span className="study-count mono">{study.number}</span>
-                    <span className="study-open" aria-hidden="true"><ArrowUpRight size={18} /></span>
-                  </div>
-                  <div className="work-card-caption">
-                    <div><h3>{study.title}</h3><span className="mono">{study.type}</span></div>
-                    <span className="caption-number mono">{study.number.replace('STUDY ', '')}</span>
-                  </div>
-                </article>
-              ))}
-            </div>
-            <p className="work-replace mono">A PLACE FOR THE REAL THING — PROJECTS CAN LIVE HERE AS THEY COME TO LIFE.</p>
-          </div>
-        </section>
+        <WorkSection />
 
         <section className="approach-section" aria-labelledby="approach-title">
           <div className="section-shell approach-layout">
@@ -246,12 +191,12 @@ function Home() {
             <h2 id="contact-title">Got a story<br />on your <em className="serif">mind?</em></h2>
             <div className="contact-bottom">
               <p>Let’s give it somewhere to go.<br />Tell us what you’re thinking — no polished brief required.</p>
-              <a className="contact-button" href="mailto:morerushi@gmail.com" data-testid="link-contact-email">
+              <a className="contact-button" href="mailto:asrmotionstudio1436@gmail.com" data-testid="link-contact-email">
                 Start a conversation <ArrowUpRight className="arrow-shift" size={19} />
               </a>
             </div>
             <div className="contact-details">
-              <a href="mailto:morerushi@gmail.com" data-testid="link-email">morerushi@gmail.com</a>
+              <a href="mailto:asrmotionstudio1436@gmail.com" data-testid="link-email">asrmotionstudio1436@gmail.com</a>
               <a href="tel:9130287749" data-testid="link-phone">+91 91302 87749</a>
               <span className="mono">INDEPENDENT / AVAILABLE WORLDWIDE</span>
             </div>
