@@ -197,7 +197,7 @@ function Home() {
             </div>
             <div className="contact-details">
               <a href="mailto:asrmotionstudio1436@gmail.com" data-testid="link-email">asrmotionstudio1436@gmail.com</a>
-              <a href="tel:9130287749" data-testid="link-phone">+91 91302 87749</a>
+              <a href="https://wa.me/919130287749" target="_blank" rel="noopener noreferrer" data-testid="link-phone">+91 91302 87749</a>
               <span className="mono">INDEPENDENT / AVAILABLE WORLDWIDE</span>
             </div>
           </div>
